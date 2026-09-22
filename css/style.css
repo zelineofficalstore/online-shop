@@ -316,6 +316,7 @@ body {
   margin: auto;
   font-weight: 100;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .menu .row {
