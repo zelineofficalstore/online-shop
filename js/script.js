@@ -42,25 +42,39 @@ document.addEventListener('click', function (e) {
 });
 
 // Modal Box
-const itemDetailModal = document.querySelector('#item-detail-modal');
+// Buka modal
 const itemDetailButtons = document.querySelectorAll('.item-detail-button');
 
 itemDetailButtons.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal.style.display = 'flex';
+  btn.addEventListener('click', (e) => {
     e.preventDefault();
-  };
+
+    const modal = document.querySelector(
+      btn.getAttribute('href')
+    );
+
+    if (modal) {
+      modal.style.display = 'flex';
+    }
+  });
 });
 
-// klik tombol close modal
-document.querySelector('.modal .close-icon').onclick = (e) => {
-  itemDetailModal.style.display = 'none';
-  e.preventDefault();
-};
+// Tutup modal
+const closeIcons = document.querySelectorAll('.close-icon');
 
-// klik di luar modal
-window.onclick = (e) => {
-  if (e.target === itemDetailModal) {
-    itemDetailModal.style.display = 'none';
-  }
-};
+closeIcons.forEach((icon) => {
+  icon.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    icon.closest('.modal').style.display = 'none';
+  });
+});
+
+// Klik di luar modal
+window.addEventListener('click', (e) => {
+  document.querySelectorAll('.modal').forEach((modal) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
