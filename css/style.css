@@ -282,6 +282,7 @@ body {
   -webkit-mask-size: 50%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
+  border-radius: 5%;
 }
 
 .about .row .content {
