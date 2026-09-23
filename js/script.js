@@ -173,3 +173,5 @@ modalButtons.forEach((button) => {
     renderCart();
   });
 });
+
+
