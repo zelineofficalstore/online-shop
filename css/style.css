@@ -406,6 +406,14 @@ body {
   font-size: 1rem;
 }
 
+.remove-item-btn {
+background: none;
+border: none;
+color: red;
+cursor: pointer;
+font-size: 1.2rem;
+}
+
 /* Contact Section */
 .contact .row {
   display: flex;

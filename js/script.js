@@ -78,3 +78,71 @@ window.addEventListener('click', (e) => {
     }
   });
 });
+
+const cart = [];
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    const productCard = this.closest(".product-card");
+    const name = productCard.querySelector("h3").textContent;
+    const image = productCard.querySelector("img").src;
+    const priceText =
+      productCard.querySelector(".product-price").childNodes[0].textContent;
+    const cleanedPrice = priceText.replace("IDR", "").replace("K", "").trim();
+    const price = parseInt(cleanedPrice) * 1000;
+    const itemExist = cart.find((item) => item.name === name);
+    if (itemExist) {
+      itemExist.qty++;
+    } else {
+      cart.push({
+        name,
+        image,
+        price,
+        qty: 1,
+      });
+    }
+    renderCart();
+  });
+});
+function renderCart() {
+  const cartItems = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+  const badge = document.querySelector(".quantity-badge");
+  cartItems.innerHTML = "";
+  let total = 0;
+  let totalQty = 0;
+  cart.forEach((item, index) => {
+    total += item.price * item.qty;
+    totalQty += item.qty;
+    cartItems.innerHTML += `
+<div class="cart-item">
+ 
+${item.image}
+ 
+<div class="item-detail">
+ 
+<h3>${item.name}</h3>
+ 
+<div class="item-price">
+${item.qty} x IDR ${item.price.toLocaleString("id-ID")}
+</div>
+ 
+</div>
+ 
+<button
+class="remove-item-btn"
+onclick="removeItem(${index})">
+Hapus
+</button>
+ 
+</div>
+`;
+  });
+  cartTotal.textContent = "IDR " + total.toLocaleString("id-ID");
+  badge.textContent = totalQty;
+}
+function removeItem(index) {
+  cart.splice(index, 1);
+  renderCart();
+}
