@@ -79,6 +79,7 @@ window.addEventListener('click', (e) => {
   });
 });
 
+//Shopping-Cart Navbar
 const cart = [];
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 addToCartButtons.forEach((button) => {
@@ -118,7 +119,7 @@ function renderCart() {
     cartItems.innerHTML += `
 <div class="cart-item">
  
-${item.image}
+<img src="${item.image}" alt="${item.name}" class="cart-item-image">
  
 <div class="item-detail">
  
@@ -146,3 +147,29 @@ function removeItem(index) {
   cart.splice(index, 1);
   renderCart();
 }
+
+const modalButtons = document.querySelectorAll(".add-to-cart-modal");
+modalButtons.forEach((button) => {
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    const modalContent = this.closest(".modal-content");
+    const name = modalContent.querySelector("h3").textContent;
+    const image = modalContent.querySelector("img").src;
+    const priceText =
+      modalContent.querySelector(".product-price").childNodes[0].textContent;
+    const cleanedPrice = priceText.replace("IDR", "").replace("K", "").trim();
+    const price = parseInt(cleanedPrice) * 1000;
+    const itemExist = cart.find((item) => item.name === name);
+    if (itemExist) {
+      itemExist.qty++;
+    } else {
+      cart.push({
+        name,
+        image,
+        price,
+        qty: 1,
+      });
+    }
+    renderCart();
+  });
+});

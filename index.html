@@ -43,7 +43,7 @@
 
     <div class="navbar-extra">
       <a href="#" id="search-button"><i data-feather="search"></i></a>
-      <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+      <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i><span class="quantity-badge">0</span></a>
       <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
     </div>
 
@@ -56,18 +56,36 @@
 
     <!-- Shopping Cart start -->
       <div class="shopping-cart">
-        
-      <div id="cart-items">
-        
-      <!-- Item akan muncul di sini lewat JavaScript -->
-        
+       
+      <div class="cart-header">
+      <h2>🛒 Keranjang Belanja</h2>
+      <p>Daftar Produk Pilihan Anda</p>
       </div>
-      
-      <div class="total-price">
-      <h3>Total : <span id="cart-total">IDR 0</span></h3>
-     </div>
-     
-    </div>
+       
+      <hr>
+       
+      <div id="cart-items">
+       
+      <!-- Item akan muncul di sini lewat JavaScript -->
+       
+      </div>
+       
+      <hr>
+       
+      <div class="cart-footer">
+       
+      <div class="cart-summary">
+      <span>Total Belanja</span>
+      <h3 id="cart-total">IDR 0</h3>
+      </div>
+       
+      <button class="checkout-btn">
+      Checkout
+      </button>
+       
+      </div>
+       
+      </div>
     <!-- Shopping Cart end -->
 
   </nav>
@@ -468,7 +486,8 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 320K <span>IDR 350K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span></a>
         </div>
       </div>
     </div>
@@ -491,7 +510,8 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 182K <span>IDR 200K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span></a>
         </div>
       </div>
     </div>
@@ -514,7 +534,9 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 275K <span>IDR 300K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span>
+          </a>
         </div>
       </div>
     </div>
@@ -537,7 +559,8 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 300K <span>IDR 350K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+    <i data-feather="shopping-cart"></i><span>add to cart</span></a>
         </div>
       </div>
     </div>
@@ -560,7 +583,9 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 300K <span>IDR 350K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span>
+          </a>
         </div>
       </div>
     </div>
@@ -583,7 +608,9 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 325K <span>IDR 350K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span>
+          </a>
         </div>
       </div>
     </div>
@@ -606,7 +633,9 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 325K <span>IDR 350K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span>
+          </a>
         </div>
       </div>
     </div>
@@ -629,7 +658,9 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 275K <span>IDR 300K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span>
+          </a>
         </div>
       </div>
     </div>
@@ -675,7 +706,9 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 250K <span>IDR 300K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span>
+          </a>
         </div>
       </div>
     </div>
@@ -698,7 +731,9 @@
             <i data-feather="star"></i>
           </div>
           <div class="product-price">IDR 250K <span>IDR 300K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+          <a href="#" class="add-to-cart-modal">
+            <i data-feather="shopping-cart"></i><span>add to cart</span>
+          </a>
         </div>
       </div>
     </div>
