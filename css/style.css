@@ -646,7 +646,16 @@ footer .socials a:active {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
+  .row {
+  grid-template-columns: repeat(2, 1fr);
+}
   }
+
+ @media (max-width: 576px) {
+.row {
+grid-template-columns: 1fr;
+}
+} 
 
   navbar-brand {
     display: none;
