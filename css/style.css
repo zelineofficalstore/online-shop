@@ -141,7 +141,7 @@ body {
   margin: 2rem 0;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   padding-bottom: 1rem;
   border-bottom: 1px dashed #666;
   position: relative;
@@ -175,16 +175,13 @@ body {
 margin-top: 20px;
 padding: 12px;
 text-align: center;
-background: #f8f9fa;
-
 color: #333;
 font-weight: 500;
 }
 
-
-cart-header {
+.cart-header {
 text-align: center;
-margin-bottom: 1rem;
+margin-bottom: 2rem;
 }
  
 .cart-header h2 {
