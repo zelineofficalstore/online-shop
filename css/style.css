@@ -219,7 +219,7 @@ body {
   padding: 1rem;
   border: none;
   background-color: var(--primary);
-  color: white;
+  color: #101010;
   cursor: pointer;
   border-radius: 5px;
   font-size: 1.4rem;
@@ -229,6 +229,75 @@ body {
   background: #966d45;
 }
 
+/*info Pembayaran*/
+.payment-modal {
+display: none;
+position: fixed;
+z-index: 9999;
+inset: 0;
+background: rgba(0, 0, 0, 0.6);
+justify-content: center;
+align-items: center;
+}
+
+.payment-content {
+background: #fff;
+color: #101010;
+width: 90%;
+max-width: 450px;
+padding: 25px;
+border-radius: 15px;
+text-align: center;
+position: relative;
+animation: popup 0.3s ease;
+}
+
+@keyframes popup {
+from {
+transform: scale(.8);
+opacity: 0;
+}
+to {
+transform: scale(1);
+opacity: 1;
+}
+}
+
+.close-modal {
+position: absolute;
+top: 12px;
+right: 18px;
+font-size: 28px;
+cursor: pointer;
+}
+
+.payment-info p {
+margin: 8px 0;
+}
+
+.payment-total h2 {
+color: #101010;
+margin: 10px 0;
+}
+
+.payment-note {
+padding-bottom: 20px;
+}
+
+.confirm-payment-btn {
+display: inline-block;
+margin-top: 10px;
+background: var(--primary);
+color: #fff;
+padding: 10px 12px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+} 
+
+.confirm-payment-btn:hover {
+background: #1ea952;
+}
 
 /* Hero Section */
 .hero {

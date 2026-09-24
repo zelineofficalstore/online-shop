@@ -190,3 +190,30 @@ menuButtons.forEach((button) => {
 });
 
 // Modal Pembayaran
+const checkoutBtn = document.querySelector(".checkout-btn");
+const modal = document.getElementById("payment-modal");
+const closeModal = document.querySelector(".close-modal");
+checkoutBtn.addEventListener("click", () => {
+  // Ambil total dari keranjang
+  const totalBelanja = document.getElementById("cart-total").textContent;
+  // Tampilkan total pada popup
+  document.getElementById("payment-total").textContent = totalBelanja;
+  // Siapkan pesan WhatsApp
+  const pesan = encodeURIComponent(
+    `Halo, saya ingin melakukan checkout.\nTotal Belanja: ${totalBelanja}\nSaya akan segera melakukan pembayaran.`,
+  );
+  document.getElementById("wa-checkout").href =
+    `https://wa.me/6285888180583?text=${pesan}`;
+  // Tampilkan modal
+  modal.style.display = "flex";
+});
+// Tutup modal
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+// Klik area luar modal
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
