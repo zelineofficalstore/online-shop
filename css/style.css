@@ -129,7 +129,7 @@ body {
   width: 35rem;
   padding: 0 1.5rem;
   background-color: #fff;
-  color: #666;
+  color: #202020;
   transition: 0.3s;
 }
 
@@ -170,6 +170,17 @@ body {
 .shopping-cart .remove-item:hover {
   color: var(--primary);
 }
+
+.cart-thankyou {
+margin-top: 20px;
+padding: 12px;
+text-align: center;
+background: #f8f9fa;
+
+color: #333;
+font-weight: 500;
+}
+
 
 cart-header {
 text-align: center;
