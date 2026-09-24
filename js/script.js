@@ -115,25 +115,18 @@ function renderCart() {
     totalQty += item.qty;
     cartItems.innerHTML += `
 <div class="cart-item">
- 
 <img src="${item.image}" alt="${item.name}" class="cart-item-image">
- 
 <div class="item-detail">
- 
 <h3>${item.name}</h3>
- 
 <div class="item-price">
 ${item.qty} x IDR ${item.price.toLocaleString('id-ID')}
 </div>
- 
 </div>
- 
 <button
 class="remove-item-btn"
 onclick="removeItem(${index})">
 Hapus
 </button>
- 
 </div>
 `;
   });

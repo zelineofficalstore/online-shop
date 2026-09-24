@@ -183,30 +183,37 @@ body {
   text-align: center;
   margin-bottom: 2rem;
 }
-  .cart-header h2 {
+
+.cart-header h2 {
   font-size: 1.8rem;
   color: #333;
   margin-bottom: 0.3rem;
 }
-  .cart-header p {
+
+.cart-header p {
   font-size: 1.2rem;
   color: #777;
 }
-  .cart-footer {
+
+.cart-footer {
   margin-top: 1rem;
 }
-  .cart-summary {
+
+.cart-summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-  .cart-summary span {
+
+.cart-summary span {
   font-size: 1.4rem;
 }
-  .cart-summary h3 {
-  color: #b6895b;
+
+.cart-summary h3 {
+  color: #202020;
 }
-  .checkout-btn {
+
+ .checkout-btn {
   width: 100%;
   margin-top: 1rem;
   padding: 1rem;
@@ -217,9 +224,11 @@ body {
   border-radius: 5px;
   font-size: 1.4rem;
 }
-  .checkout-btn:hover {
+
+.checkout-btn:hover {
   background: #966d45;
 }
+
 
 /* Hero Section */
 .hero {
