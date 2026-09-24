@@ -197,23 +197,3 @@ menuButtons.forEach((button) => {
 });
 
 // Modal Pembayaran
-checkoutBtn.addEventListener("click", () => {
-  document.getElementById("cart-container").innerHTML = `
-<h2>Informasi Pembayaran</h2>
- 
-<p>Total Belanja: <strong>Rp ${total}</strong></p>
- 
-<div class="payment-info">
-<p><strong>Bank:</strong> BCA</p>
-<p><strong>No. Rekening:</strong> 1234567890</p>
-<p><strong>Atas Nama:</strong> Nahda Chairunisa</p>
-</div>
- 
-<p>
-Setelah pembayaran kirim bukti transfer ke WhatsApp:
-<strong>085888180583</strong>
-</p>
-`;
-});
-
-
