@@ -172,61 +172,53 @@ body {
 }
 
 .cart-thankyou {
-margin-top: 20px;
-padding: 12px;
-text-align: center;
-color: #333;
-font-weight: 500;
+  margin-top: 20px;
+  padding: 12px;
+  text-align: center;
+  color: #333;
+  font-weight: 500;
 }
 
 .cart-header {
-text-align: center;
-margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
- 
-.cart-header h2 {
-font-size: 1.8rem;
-color: #333;
-margin-bottom: 0.3rem;
+  .cart-header h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.3rem;
 }
- 
-.cart-header p {
-font-size: 1.2rem;
-color: #777;
+  .cart-header p {
+  font-size: 1.2rem;
+  color: #777;
 }
- 
-.cart-footer {
-margin-top: 1rem;
+  .cart-footer {
+  margin-top: 1rem;
 }
- 
-.cart-summary {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  .cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
- 
-.cart-summary span {
-font-size: 1.4rem;
+  .cart-summary span {
+  font-size: 1.4rem;
 }
- 
-.cart-summary h3 {
-color: #b6895b;
+  .cart-summary h3 {
+  color: #b6895b;
 }
- 
-.checkout-btn {
-width: 100%;
-margin-top: 1rem;
-padding: 1rem;
-border: none;
-background: #b6895b;
-color: white;
-cursor: pointer;
-border-radius: 5px;
-font-size: 1.4rem;
+  .checkout-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.4rem;
 }
- 
-.checkout-btn:hover {
-background: #966d45;
+  .checkout-btn:hover {
+  background: #966d45;
 }
 
 /* Hero Section */
@@ -252,7 +244,6 @@ background: #966d45;
   bottom: 0;
   background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
 } */
-
 
 .hero .content {
   padding: 1.4rem 7%;
@@ -394,7 +385,7 @@ background: #966d45;
 }
 
 .add-to-cart {
-color: #fff; /* putih */
+  color: #fff; /* putih */
 }
 
 /* Products Section */
@@ -469,11 +460,11 @@ color: #fff; /* putih */
 }
 
 .remove-item-btn {
-background: none;
-border: none;
-color: red;
-cursor: pointer;
-font-size: 1.2rem;
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 
 /* Contact Section */
@@ -566,13 +557,12 @@ footer .socials a,
 footer .socials a:visited,
 footer .socials a:hover,
 footer .socials a:active {
-color: #fff;
-text-decoration: none;
- font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
 }
- 
-footer .socials i {
-color: #fff;
+  footer .socials i {
+  color: #fff;
 }
 
 /* Modal Box */
@@ -653,9 +643,13 @@ color: #fff;
 }
 
 /* Tablet */
-@media (max-width: 758px) {
+@media (max-width: 768px) {
   html {
     font-size: 62.5%;
+  }
+
+  navbar-brand {
+    display: none;
   }
 
   #hamburger-menu {
@@ -741,11 +735,10 @@ color: #fff;
   }
 }
 
-  .hero {
-    background-position: center top;
-    min-height: 70vh;
+.hero {
+  background-position: center top;
+  min-height: 70vh;
 }
-
 
 /* Mobile Phone */
 @media (max-width: 450px) {
