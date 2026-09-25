@@ -397,7 +397,6 @@ flex: 0 0 50%; /* gambar hanya 40% lebar row */
 flex: 0 0 50%;
 }
 
-
 .about .row .about-img img {
 width: 100%;
 max-width: 450px; /* batasi ukuran maksimal */
