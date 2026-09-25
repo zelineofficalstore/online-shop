@@ -293,7 +293,7 @@ padding: 6px 10px;
 border-radius: 10px;
 text-decoration: none;
 font-weight: bold;
-font-size: 5px;
+font-size: 1rem;
 } 
 
 .confirm-payment-btn:hover {
@@ -312,6 +312,7 @@ background: #1ea952;
   position: relative;
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+  overflow: hidden;
 }
 
 .hero .content {
@@ -392,6 +393,11 @@ gap: 2rem;
 flex: 0 0 50%; /* gambar hanya 40% lebar row */
 }
 
+.about .row .content {
+flex: 0 0 50%;
+}
+
+
 .about .row .about-img img {
 width: 100%;
 max-width: 450px; /* batasi ukuran maksimal */
@@ -400,10 +406,6 @@ display: block;
 margin: 0 auto;
 border-radius: 10px;
 object-fit: contain;
-}
-
-.about .row .content {
-flex: 0 0 50%;
 }
 
 .about .row .content h3 {
@@ -666,13 +668,14 @@ text-decoration: none;
   color: #fff;
   background-color: var(--primary);
   cursor: pointer;
+  border-radius: 3%;
 }
 
 /* Footer */
 footer {
   background-color: var(--primary);
   text-align: center;
-  padding: 1rem 0 3rem;
+  padding: 0.5rem 0 2rem;
   margin-top: 1rem;
 }
 
@@ -802,7 +805,7 @@ footer .socials i {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
-  .row {
+    .row {
   grid-template-columns: repeat(2, 1fr);
 }
   }
