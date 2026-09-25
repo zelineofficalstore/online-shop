@@ -483,12 +483,16 @@ margin: 0 auto;
   width: 80%;
 }
 
+.menu .menu-card-price {
+  font-size: 1.3rem;
+}
+
 .menu .row .menu-card .menu-card-title {
   margin: 1rem auto 0.5rem;
 }
 
 .add-to-cart {
-  color: #fff; /* putih */
+  color: #fff; 
 }
 
 /* Products Section */
@@ -601,19 +605,21 @@ margin-bottom: 1rem;
 font-weight: 300;
 }
 
-.electronik .item-card-title h3 {
-font-size: 1.8rem;
-font-weight: 400;
+.product-content h3 {
+font-size: 1.5rem;
 margin-bottom: 1rem;
+font-weight: 300;
 }
 
 .electronik p {
 max-width: 600px;
 margin: 0 auto 3rem;
+font-weight: 100;
 }
 
 .electronik .item-card-price {
-margin-bottom: 0.3rem; /* kecilkan jarak ke icon */
+font-size: 1.3rem;
+margin-bottom: 0.3rem; 
 }
 
 .electronik .add-to-cart {
