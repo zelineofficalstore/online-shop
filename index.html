@@ -26,17 +26,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
       integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbZe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer"/>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- AOS Animation -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- My Style -->
     <link rel="stylesheet" href="css/style.css" />
+    
   </head>
+
+  <body id="home" class="scrollspy"></body>
 
   <body>
     <!-- Navbar start -->
     <nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
-      <a class="navbar-brand" href="#"> <img src="/img/logo/logo-zelineshop.png" width="50" height="50" class="d-inline-block align-text-top" /></a>
+      <a class="navbar-brand" href="#"> <img src="img/logo/logo-zelineshop.png" width="50" height="50" class="d-inline-block align-text-top" /></a>
 
       <div class="navbar-nav">
         <a href="#home">Home</a>
@@ -84,31 +91,30 @@
        </div>
       </div>
 
-<!-- Modal Pembayaran -->
-<div id="payment-modal" class="payment-modal">
-<div class="payment-content">
-<span class="close-modal">&times;</span>
-<h2>💳 Informasi Pembayaran</h2>
-<div class="payment-info">
-<p><strong>Bank:</strong> Bank Syariah Indonesia</p>
-<p><strong>No. Rekening:</strong> 7320729739</p>
-<p><strong>Atas Nama:</strong> Nahda Chairunisa</p>
-</div>
-<hr>
-<div class="payment-total">
-<h3>Total Pembayaran</h3>
-<h2 id="payment-total">IDR 0</h2>
-</div>
-<p class="payment-note">
-Setelah melakukan pembayaran, silakan kirim bukti transfer melalui WhatsApp.
-</p>
-<a
-id="wa-checkout"
-href="#"
-target="_blank"
-class="checkout-btn">Konfirmasi via WhatsApp</a>    
-
-<!-- Shopping Cart end -->
+      <!-- Modal Pembayaran -->
+      <div id="payment-modal" class="payment-modal">
+      <div class="payment-content">
+      <span class="close-modal">&times;</span>
+      <h2>💳 Informasi Pembayaran</h2>
+      <div class="payment-info">
+      <p><strong>Bank:</strong> Bank Syariah Indonesia</p>
+      <p><strong>No. Rekening:</strong> 7320729739</p>
+      <p><strong>Atas Nama:</strong> Nahda Chairunisa</p>
+      </div>
+      <hr>
+      <div class="payment-total">
+      <h3>Total Pembayaran</h3>
+      <h2 id="payment-total">IDR 0</h2>
+      </div>
+      <p class="payment-note">
+      Setelah melakukan pembayaran, silakan kirim bukti transfer melalui WhatsApp.
+      </p>
+      <a
+      id="wa-checkout"
+      href="#"
+      target="_blank"
+      class="checkout-btn">Konfirmasi via WhatsApp</a>    
+      <!-- Shopping Cart end -->
        
     </nav>
     <!-- Navbar end -->
@@ -130,7 +136,7 @@ class="checkout-btn">Konfirmasi via WhatsApp</a>
 
       <div class="row">
         <div class="about-img">
-          <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
+          <img src="img/tentang-kami.jpg" alt="Tentang Kami" data-aos="zoom-in-up" data-aos-duration="3000"/>
         </div>
         <div class="content">
           <h3>Kenapa memilih produk kami?</h3>
@@ -151,69 +157,69 @@ class="checkout-btn">Konfirmasi via WhatsApp</a>
 
       <div class="row">
         <div class="menu-card">
-          <img src="img/menu/1.jpg" alt="Tumbler Owala 01" class="menu-card-img" />
+          <img src="img/menu/1.jpg" alt="Tumbler Owala 01" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Owala 01</h3>
           <p class="menu-card-price">IDR 400K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
 
         <div class="menu-card">
-          <img src="img/menu/2.jpg" alt="Tumbler Owala" class="menu-card-img" />
+          <img src="img/menu/2.jpg" alt="Tumbler Owala" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Owala 02</h3>
           <p class="menu-card-price">IDR 375 K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
 
         <div class="menu-card">
-          <img src="img/menu/3.jpg" alt="Tumbler Owala 03" class="menu-card-img" />
+          <img src="img/menu/3.jpg" alt="Tumbler Owala 03" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Owala 03</h3>
           <p class="menu-card-price">IDR 400K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
 
         <div class="menu-card">
-          <img src="img/menu/4.jpg" alt="Tumbler Owala 04" class="menu-card-img" />
+          <img src="img/menu/4.jpg" alt="Tumbler Owala 04" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Owala 04</h3>
           <p class="menu-card-price">IDR 400K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
 
         <div class="menu-card">
-          <img src="img/menu/5.jpg" alt="Tumbler Owala 05" class="menu-card-img" />
-          <h3 class="menu-card-title">Tumbler Owala</h3>
+          <img src="img/menu/5.jpg" alt="Tumbler Owala 05" class="menu-card-img"/>
+          <h3 class="menu-card-title">Tumbler Owala 05</h3>
           <p class="menu-card-price">IDR 300K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
 
         <div class="menu-card">
-          <img src="img/menu/6.jpg" alt="Tumbler Owala" class="menu-card-img" />
+          <img src="img/menu/6.jpg" alt="Tumbler Owala 06" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Owala 06</h3>
           <p class="menu-card-price">IDR 400K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
         <div class="menu-card">
-          <img src="img/menu/7.jpg" alt="Tumbler Owala 07" class="menu-card-img" />
+          <img src="img/menu/7.jpg" alt="Tumbler Owala 07" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Owala 07</h3>
           <p class="menu-card-price">IDR 350K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
 
         <div class="menu-card">
-          <img src="img/menu/8.jpg" alt="Tumbler Corkcicle 01" class="menu-card-img" />
+          <img src="img/menu/8.jpg" alt="Tumbler Corkcicle 01" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Corkcicle 01</h3>
           <p class="menu-card-price">IDR 300K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
 
         <div class="menu-card">
-          <img src="img/menu/9.jpg" alt="Tumbler Kate Spade 01" class="menu-card-img" />
+          <img src="img/menu/9.jpg" alt="Tumbler Kate Spade 01" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Kate Spade 01</h3>
           <p class="menu-card-price">IDR 250K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
         </div>
 
         <div class="menu-card">
-          <img src="img/menu/10.jpg" alt="Tumbler Corkcicle 02" class="menu-card-img" />
+          <img src="img/menu/10.jpg" alt="Tumbler Corkcicle 02" class="menu-card-img"/>
           <h3 class="menu-card-title">Tumbler Corkcicle 02</h3>
           <p class="menu-card-price">IDR 300K</p>
           <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
@@ -489,7 +495,51 @@ class="checkout-btn">Konfirmasi via WhatsApp</a>
       </div>
     </section>
     <!-- Products Section end -->
-    
+
+    <!-- Electronik Section start -->
+    <section class="electronik" id="electronik">
+      <h2><span>Produk Electronik</span> Kami</h2>
+      <p>Produk murah selalu menjadi pilihan pelanggan setia kami</p>
+
+      <div class="row">
+        <div class="item-card">
+          <img src="img/electronik/1.jpg"/>
+          <div class="product-content">
+            <h3 class="item-card-title">Modem wifi Advance</h3>
+            <p class="item-card-price">IDR 430K</p>
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <img src="img/electronik/2.jpg"/>
+          <div class="product-content">
+            <h3 class="item-card-title">Travel Adaptor Aibot</h3>
+            <p class="item-card-price">IDR 400K</p>
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <img src="img/electronik/3.jpg"/>
+          <div class="product-content">
+            <h3 class="item-card-title">Modem ProLink D-7202</h3>
+            <p class="item-card-price">IDR 700K</p>
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <img src="img/electronik/4.jpg"/>
+          <div class="product-content">
+            <h3 class="item-card-title">Powerbank Kiip 5000 Mah</h3>
+            <p class="item-card-price">IDR 400K</p>
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i><span> Add to cart</span></a>
+          </div>
+        </div>
+      </section>
+    <!-- Electronik Section end -->
+
     <!-- Contact Section start -->
     <section id="contact" class="contact">
       <h2><span>Kontak</span> Kami</h2>
@@ -528,10 +578,16 @@ class="checkout-btn">Konfirmasi via WhatsApp</a>
     <!-- Footer start -->
     <footer>
       <div class="socials">
-        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/nahda.ch/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/search?q=nahda%20chairunisa&t=1790143934864"><i class="fa-brands fa-tiktok"></i></a>
-      </div>
+        <a href="#" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/nahda.ch/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@nahda.chairunisa" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+        </a>
+        </div>
 
       <div class="links">
         <a href="#home">Home</a>
@@ -820,5 +876,24 @@ class="checkout-btn">Konfirmasi via WhatsApp</a>
 
     <!-- My Javascript -->
     <script src="js/script.js"></script>
+
+    <!-- Slider Javascript -->
+     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.slider');
+      M.Slider.init(elems, {
+      indicators: true,
+      height: 500,
+      duration: 500,
+      interval: 4000
+      });
+      });
+      </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
   </body>
 </html>
