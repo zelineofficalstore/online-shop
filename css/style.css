@@ -82,6 +82,10 @@ body {
   color: var(--primary);
 }
 
+.navbar .navbar-nav a {
+display: none; /* Navbar tidak terlihat*/
+}
+
 #hamburger-menu {
   display: none;
 }
@@ -626,6 +630,18 @@ display: inline-flex;
 align-items: center;
 gap: 0.3rem; /* jarak icon dan teks Add to cart */
 text-decoration: none;
+}
+
+.electronik a {
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
