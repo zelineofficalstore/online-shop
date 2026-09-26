@@ -390,25 +390,23 @@ background: #1ea952;
 .about .row {
 display: flex;
 align-items: center;
-gap: 2rem;
+gap: 3rem;
 }
 
 .about .row .about-img {
-flex: 0 0 50%; /* gambar hanya 40% lebar row */
+flex: 0 0 60%; /* gambar hanya 40% lebar row */
 }
 
 .about .row .content {
-flex: 0 0 50%;
+flex: 0 0 40%;
 }
 
 .about .row .about-img img {
 width: 100%;
-max-width: 450px; /* batasi ukuran maksimal */
-height: auto;
-display: block;
-margin: 0 auto;
-border-radius: 10px;
-object-fit: contain;
+height: 700px;
+object-fit: cover;
+border-radius: 16px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .about .row .content h3 {
@@ -648,21 +646,23 @@ text-decoration: none;
 
 /* Contact Section */
 .contact .row {
-  display: flex;
-  margin-top: 2rem;
-  background-color: #222;
+display: flex;
+align-items: stretch;
+gap: 2rem;
+margin-top: 2rem;
+background-color: #222;
 }
 
 .contact .row .map {
-  flex: 1 1 45rem;
-  width: 100%;
-  object-fit: cover;
+flex: 1;
+min-height: 450px;
+border: 0;
 }
 
 .contact .row form {
-  flex: 1 1 45rem;
-  padding: 5rem 2rem;
-  text-align: center;
+flex: 1;
+padding: 3rem 2rem;
+text-align: center;
 }
 
 .contact .row form .input-group {
@@ -831,6 +831,16 @@ footer .socials i {
   grid-template-columns: repeat(2, 1fr);
 }
   }
+
+.contact .row {
+flex-direction: column;
+}
+
+.contact .row .map {
+width: 100%;
+min-height: 300px;
+}
+
 
 .electronik .row .item-card {
 width: 100%;
