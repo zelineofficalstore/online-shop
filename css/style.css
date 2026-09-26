@@ -390,7 +390,7 @@ background: #1ea952;
 .about .row {
 display: flex;
 align-items: center;
-gap: 3rem;
+gap: 2rem;
 }
 
 .about .row .about-img {
@@ -403,10 +403,12 @@ flex: 0 0 40%;
 
 .about .row .about-img img {
 width: 100%;
-height: 700px;
-object-fit: cover;
-border-radius: 16px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+max-width: 450px; /* batasi ukuran maksimal */
+height: auto;
+display: block;
+margin: 0 auto;
+border-radius: 10px;
+object-fit: contain;
 }
 
 .about .row .content h3 {
