@@ -403,12 +403,10 @@ flex: 0 0 40%;
 
 .about .row .about-img img {
 width: 100%;
-max-width: 450px; /* batasi ukuran maksimal */
-height: auto;
-display: block;
-margin: 0 auto;
-border-radius: 10px;
-object-fit: contain;
+height: 700px;
+object-fit: cover;
+border-radius: 16px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .about .row .content h3 {
@@ -833,16 +831,6 @@ footer .socials i {
   grid-template-columns: repeat(2, 1fr);
 }
   }
-
-.contact .row {
-flex-direction: column;
-}
-
-.contact .row .map {
-width: 100%;
-min-height: 300px;
-}
-
 
 .electronik .row .item-card {
 width: 100%;
