@@ -504,6 +504,7 @@ margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem;
   margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .products .product-card {
@@ -838,6 +839,10 @@ width: 100%;
 .electronik .row .item-card img {
 width: 100%;
 height: auto;
+}
+
+.elektronik {
+margin-bottom: 20px;
 }
 
   #hamburger-menu {
