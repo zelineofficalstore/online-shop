@@ -35,6 +35,32 @@ body {
   left: 0;
   right: 0;
   z-index: 9999;
+
+  height: auto;
+  min-height: 0;
+  line-height: normal;
+}
+
+/* Progress di bawah navbar */
+.navbar-progress {
+position: fixed;
+top: 82px; /* sesuaikan dengan tinggi navbar */
+left: 0;
+width: 100%;
+height: 2px !important;
+margin: 0 !important;
+background-color: #faf7f4 !important;
+z-index: 9999;
+}
+
+/* Warna animasi */
+.navbar-progress .indeterminate {
+background-color: #b6895b !important;
+}
+
+.navbar-progress .indeterminate:before,
+.navbar-progress .indeterminate:after {
+background-color: #b6895b !important;
 }
 
 .navbar .navbar-logo {
@@ -50,7 +76,7 @@ body {
 
 .navbar .navbar-nav a {
   color: #fff;
-  display: inline-block;
+  display: none; /*sembunyikan text di Navar, jika ingin membuka inline-block*/
   font-size: 1.3rem;
   font-weight: 300;
   margin: 0 1rem;
@@ -80,10 +106,6 @@ body {
 
 .navbar .navbar-extra a:hover {
   color: var(--primary);
-}
-
-.navbar .navbar-nav a {
-display: none; /* Navbar tidak terlihat*/
 }
 
 #hamburger-menu {
@@ -489,6 +511,8 @@ margin: 0 auto;
 }
 
 .menu .row .menu-card .menu-card-title {
+  font-size: 1.5rem;
+  font-weight: 1.5rem;
   margin: 1rem auto 0.5rem;
 }
 
