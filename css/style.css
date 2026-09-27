@@ -649,23 +649,21 @@ text-decoration: none;
 
 /* Contact Section */
 .contact .row {
-display: flex;
-align-items: stretch;
-gap: 2rem;
-margin-top: 2rem;
-background-color: #222;
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
 }
 
 .contact .row .map {
-flex: 1;
-min-height: 450px;
-border: 0;
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .contact .row form {
-flex: 1;
-padding: 3rem 2rem;
-text-align: center;
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
 .contact .row form .input-group {
@@ -686,10 +684,10 @@ text-align: center;
 }
 
 .contact .row form .btn {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
+  padding: -1rem 3rem 3rem 3rem;
+  font-size: 1.2rem;
   color: #fff;
   background-color: var(--primary);
   cursor: pointer;
