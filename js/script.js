@@ -226,3 +226,9 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+
+// Section Scrollspy
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".scrollspy");
+  var instances = M.ScrollSpy.init(elems, options);
+});
