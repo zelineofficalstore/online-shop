@@ -848,6 +848,13 @@ footer .socials i {
   }
 }
 
+/* Tablet 768px */
+@media (min-width: 768px) and (max-width: 991px) {
+.navbar-progress {
+top: 85px; /* sesuaikan dengan tinggi navbar tablet */
+}
+}
+
 /* Tablet */
 @media (max-width: 768px) {
   html {
@@ -968,6 +975,10 @@ footer .socials i {
  .hero .content h1{
   margin-top: 200px;
  }
+
+ .navbar {
+height: 75px;
+}
 
  .navbar-progress {
 top: 75px;
