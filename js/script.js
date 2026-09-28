@@ -225,29 +225,3 @@ window.addEventListener("click", (e) => {
   }
 });
 
-
-/Sembunyikan products
-
-const productsBtn = document.querySelector("#products-btn");
-const hiddenProducts = document.querySelectorAll(".hidden-product");
-
-productsBtn.addEventListener("click", () => {
-hiddenProducts.forEach(product => {
-product.style.display = "block";
-});
-
-productsBtn.style.display = "none"; // sembunyikan tombol setelah diklik
-});
-
-const productsBtn = document.querySelector("#products-btn");
-const hiddenProducts = document.querySelectorAll(".hidden-product");
-productsBtn.addEventListener("click", () => {
-  hiddenProducts.forEach((product) => {
-    product.classList.toggle("show");
-  });
-  if (productsBtn.textContent.trim() === "Open") {
-    productsBtn.textContent = "Close";
-  } else {
-    productsBtn.textContent = "Open";
-  }
-});
