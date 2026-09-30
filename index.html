@@ -25,11 +25,6 @@
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- Alpine.js -->
-     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-     <script src="src/app.js"></script>
-
     <!-- Favicon -->
     <link rel="icon" href="/img/logo/logo-zelineshop.png" type="image/x-icon" />
 
@@ -87,27 +82,15 @@
 
       <!-- Shopping Cart start -->
       <div class="shopping-cart">
-         <div class="cart-header">
+        <div class="cart-header">
           <h2>🛒 Keranjang Belanja</h2>
           <p>Daftar Produk Pilihan Anda</p>
         </div>
-
-        <template x-for="(item, index) in $store.cart.items" x-keys="index">
-        <div id="cart-item">
-        <img :src="`img/products/${item.img}`" :alt="item.name">
-        <div class="item-detail">
-          <h3 x-text="item.name"></h3>
-          <div class="item-price">
-            <span x-text="rupiah(item.price)"></span> &times;
-            <button id="remove">&minus;</button>
-            <span x-taxt="item.quantity"></span>
-            <button id="add" @click="&store.cart.add(item)">&plus;</button> &equals;
-            <span x-text="rupiah(item.total)"></span>
-          </div>
+        <hr />
+        <div id="cart-items">
+        <!-- Item akan muncul di sini lewat JavaScript -->
         </div>
-      <div>
-    </template>
-    
+        <hr />
         <div class="cart-footer">
          <div class="cart-summary">
            <span>Total Belanja</span>
@@ -287,43 +270,260 @@
       <p>Produk unggulan selalu menjadi pilihan pelanggan setia kami</p>
 
       <div class="row">
-        <template x-for="(item, index) in items" x-key='index'>
         <div class="product-card">
           <div class="product-icons">
-            <a href="#" @click.prevent="$store.cart.add(item)">
-              <svg width="24" height="24" fill="none"  stroke="currentColor" stroke-width="2"   stroke-linecap="round" stroke-linejoin="round"><use href="img/feather-sprite.svg#shopping-cart"/>
-              </svg>
-            </a>
-            <a href="#modal-1" class="item-detail-button">
-               <svg width="24" height="24" fill="none"  stroke="currentColor" stroke-width="2"   stroke-linecap="round" stroke-linejoin="round"><use href="img/feather-sprite.svg#eye"/>
-              </svg>
-            </a>
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-1" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
           <div class="product-image">
-            <img :src="`img/products/${item.img}`" :alt="item.name" class="responsive-img materialboxed"/>
+            <img src="img/products/img-1.jpg" class="responsive-img materialboxed"/>
           </div>
           <div class="product-content">
-            <h3 x-text="item.name"></h3>
+            <h3>Men's Shirt</h3>
             <div class="product-stars">
-               <svg width="24" height="24" fill="currentColor"  stroke="currentColor" stroke-width="2"   stroke-linecap="round" stroke-linejoin="round"><use href="img/feather-sprite.svg#star"/>
-              </svg>
-               <svg width="24" height="24" fill="currentColor"  stroke="currentColor" stroke-width="2"   stroke-linecap="round" stroke-linejoin="round"><use href="img/feather-sprite.svg#star"/>
-              </svg>
-               <svg width="24" height="24" fill="currentColor"  stroke="currentColor" stroke-width="2"   stroke-linecap="round" stroke-linejoin="round"><use href="img/feather-sprite.svg#star"/>
-              </svg>
-               <svg width="24" height="24" fill="currentColor"  stroke="currentColor" stroke-width="2"   stroke-linecap="round" stroke-linejoin="round"><use href="img/feather-sprite.svg#star"/>
-              </svg>
-               <svg width="24" height="24" fill="currentColor"  stroke="currentColor" stroke-width="2"   stroke-linecap="round" stroke-linejoin="round"><use href="img/feather-sprite.svg#star"/>
-              </svg>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
             </div>
-            <div class="product-price"><span x-text="rupiah(item.price)"></span></div>
+            <div class="product-price">IDR 320K <span>IDR 350K</span></div>
           </div>
         </div>
-        </template>
-        
+
+	<div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-2" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-2.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>T-Shirts</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 182K <span>IDR 200K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-3" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-3.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>T-Shirts</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 275K <span>IDR 300K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-4" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-4.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>T-Shirts</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 200K <span>IDR 250K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-5" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-5.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>T-Shirts</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 200K <span>IDR 250K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-6" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-6.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>Sweater</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 325K <span>IDR 350K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-7" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-7.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>Sweater</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 325K <span>IDR 350K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-8" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-8.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>Sweater</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 275K <span>IDR 300K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-9" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-9.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>T-Shirts</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 200K <span>IDR 250K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-10" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-10.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>Trousers White</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 250K <span>IDR 300K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-11" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-11.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>Trousers Black</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 250K <span>IDR 300K</span></div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icons">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#modal-12" class="item-detail-button"><i data-feather="eye"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/img-12.jpg" class="responsive-img materialboxed"/>
+          </div>
+          <div class="product-content">
+            <h3>Women's Shirt</h3>
+            <div class="product-stars">
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 350K <span>IDR 400K</span></div>
+          </div>           
+        </div>
       </div>
     </section>
-    <!-- Products Section end -->
+        <!-- Product Section end -->
 
     <!-- Electronik Section start -->
     <section class="electronik" id="electronik">

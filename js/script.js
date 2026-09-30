@@ -78,7 +78,7 @@ window.addEventListener("click", (e) => {
 });
 
 //Shopping-Cart Navbar
-/*const cart = [];
+const cart = [];
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 addToCartButtons.forEach((button) => {
   button.addEventListener("click", function (e) {
@@ -194,7 +194,7 @@ buttons.forEach((button) => {
     }
     renderCart();
   });
-});*/
+});
 
 // Modal Pembayaran
 const checkoutBtn = document.querySelector(".checkout-btn");
