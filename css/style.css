@@ -615,6 +615,16 @@ display: block;
 width: 100%;
 }
 
+/* Contact */
+.contact {
+min-height: 300px; /* tinggi minimum */
+padding: 50px 0; /* jarak atas dan bawah */
+}
+
+.contact .card-panel,
+.contact .collection {
+width: 100%;
+}
 
 /* Footer */
 footer {
@@ -736,7 +746,7 @@ padding: 1rem 1.6rem;
 
 /* Tablet */
 @media (max-width: 992px) {
-.m*dal-container {
+.modal-container {
 max-width: 700ppx;
 }
 
