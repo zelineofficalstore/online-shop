@@ -543,12 +543,13 @@ height: auto;
 
 /* Electronik Section */
 .electronik .row {
-margin-top: 2rem;
+margin-top: 5rem;
 }
 
 .electronik .col {
 flex: 0 0 calc(25% - 20px);
 box-sizing: border-box;
+margin-top: 5rem;
 }
 
 .electronik .item-card {
