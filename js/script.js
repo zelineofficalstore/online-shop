@@ -125,8 +125,9 @@ ${item.qty} x IDR ${item.price.toLocaleString("id-ID")}
 </div>
 <button
 class="remove-item-btn"
-onclick="removeItem(${index})">
-Hapus
+onclick="removeItem(${index})"
+aria-label="Hapus Produk">
+<i class="fa-solid fa-trash"></i>
 </button>
 </div>
 `;

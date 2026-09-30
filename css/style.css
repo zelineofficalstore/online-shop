@@ -167,7 +167,7 @@ body {
 }
 
 .shopping-cart img {
-  height: 4rem;
+  height: 6rem;
   border-radius: 50%;
 }
 
@@ -187,6 +187,28 @@ body {
 
 .shopping-cart .remove-item:hover {
   color: var(--primary);
+}
+
+.shopping-cart .cart-item {
+display: flex;
+align-items: center; /* sejajarkan vertikal */
+gap: 12px;
+}
+
+.shopping-cart .item-detail {
+flex: 1; /* mengisi ruang kosong */
+}
+
+.shopping-cart .remove-item-btn {
+background: none;
+border: none;
+color: #333;
+cursor: pointer;
+font-size: 18px;
+transition: 0.3s;
+
+margin-left: auto; /* dorong ke kanan */
+margin-top: 8px; /* turun sedikit */
 }
 
 .cart-thankyou {
