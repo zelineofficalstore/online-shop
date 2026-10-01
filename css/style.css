@@ -54,7 +54,7 @@ body {
 
 .navbar .navbar-nav a {
   color: #fff;
-  display: inline-block; /*sembunyikan text di Navar, jika ingin membuka inline-block*/
+  display: none; /*sembunyikan text di Navar, jika ingin membuka inline-block*/
   font-size: 1.3rem;
   font-weight: 300;
   margin: 0 1rem;
