@@ -88,7 +88,7 @@ addToCartButtons.forEach((button) => {
     const image = productCard.querySelector("img").src;
     const priceText =
       productCard.querySelector(".product-price").childNodes[0].textContent;
-    const cleanedPrice = priceText.replace("IDR", "").replace("K", "").trim();
+    const cleanedPrice = priceText.replace("Rp", "").replace("K", "").trim();
     const price = parseInt(cleanedPrice) * 1000;
     const itemExist = cart.find((item) => item.name === name);
     if (itemExist) {
@@ -120,7 +120,11 @@ function renderCart() {
 <div class="item-detail">
 <h3>${item.name}</h3>
 <div class="item-price">
-${item.qty} x IDR ${item.price.toLocaleString("id-ID")}
+${item.qty} x ${new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+    }).format(item.price)}
 </div>
 </div>
 <button
@@ -132,7 +136,10 @@ aria-label="Hapus Produk">
 </div>
 `;
   });
-  cartTotal.textContent = "IDR " + total.toLocaleString("id-ID");
+  cartTotal.textContent = total.toLocaleString("id-ID", {
+    style: "currency",
+    currency: "IDR",
+  });
   badge.textContent = totalQty;
 }
 function removeItem(index) {
@@ -149,7 +156,7 @@ modalButtons.forEach((button) => {
     const image = modalContent.querySelector("img").src;
     const priceText =
       modalContent.querySelector(".product-price").childNodes[0].textContent;
-    const cleanedPrice = priceText.replace("IDR", "").replace("K", "").trim();
+    const cleanedPrice = priceText.replace("Rp", "").replace("K", "").trim();
     const price = parseInt(cleanedPrice) * 1000;
     const itemExist = cart.find((item) => item.name === name);
     if (itemExist) {
@@ -180,7 +187,7 @@ buttons.forEach((button) => {
     const priceText = card.querySelector(
       ".menu-card-price, .item-card-price",
     ).textContent;
-    const cleanedPrice = priceText.replace("IDR", "").replace("K", "").trim();
+    const cleanedPrice = priceText.replace("Rp", "").replace("K", "").trim();
     const price = parseInt(cleanedPrice) * 1000;
     const itemExist = cart.find((item) => item.name === name);
     if (itemExist) {

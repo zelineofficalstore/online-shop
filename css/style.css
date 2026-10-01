@@ -54,7 +54,7 @@ body {
 
 .navbar .navbar-nav a {
   color: #fff;
-  display: none; /*sembunyikan text di Navar, jika ingin membuka inline-block*/
+  display: inline-block; /*sembunyikan text di Navar, jika ingin membuka inline-block*/
   font-size: 1.3rem;
   font-weight: 300;
   margin: 0 1rem;
@@ -133,7 +133,7 @@ body {
   display: inline;
   padding: 1px 5px;
   background-color: red;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 0.8rem;
   position: absolute;
   top: 0;
@@ -312,10 +312,10 @@ cursor: pointer;
 }
 
 .payment-info p {
-margin: 8px 0;
+margin: 5px 0;
 }
 
-.payment-total h2 {
+.payment-total h3 {
 color: #101010;
 margin: 10px 0;
 }
@@ -485,8 +485,26 @@ margin: 0 auto;
   margin: 1rem auto 0.5rem;
 }
 
-.add-to-cart {
+.menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem; 
+  text-decoration: none;
   color: #fff; 
+  border: 1px solid #666;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.menu a:active,
+.menu a:focus {
+background-color: var(--primary); 
+border-color: var(--primary);
 }
 
 .responsive-img {
@@ -646,6 +664,12 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.electronik a:active,
+.electronik a:focus {
+background-color: var(--primary); 
+border-color: var(--primary);
 }
 
 .item-card {
