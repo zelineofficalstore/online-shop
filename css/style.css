@@ -151,6 +151,9 @@ body {
   color: #202020;
   transition: 0.3s;
 }
+.shopping-cart .cart-header {
+border-bottom: 1px solid rgb(80, 79, 79);
+}
 
 .shopping-cart.active {
   right: 0;
