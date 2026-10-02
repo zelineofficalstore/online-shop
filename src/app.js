@@ -40,3 +40,4 @@ const rupiah = (number) => {
     }).format(number);
 };
 
+
